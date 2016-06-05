@@ -34,8 +34,8 @@ main = do
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "slock")
         , ((mod1Mask .|. shiftMask, xK_1), spawn "chromium")
 
-        , ((mod1Mask .|. shiftMask, xK_s), spawn "setxkbmap se")
-        , ((mod1Mask .|. shiftMask, xK_a), spawn "setxkbmap us")
+        , ((mod1Mask .|. shiftMask, xK_s), spawn "setxkbmap se && xmodmap /home/aelg/.Xmodmap")
+        , ((mod1Mask .|. shiftMask, xK_a), spawn "setxkbmap us altgr-intl && xmodmap /home/aelg/.Xmodmap")
         
         , ((mod1Mask .|. shiftMask, xK_comma), spawn "/home/aelg/bin/pactl-default-sink set-sink-volume -1dB")
         , ((mod1Mask .|. shiftMask, xK_period), spawn "/home/aelg/bin/pactl-default-sink set-sink-volume +1dB")

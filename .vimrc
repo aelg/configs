@@ -25,6 +25,12 @@ imap <silent> <End> <C-o>g<End>
 
 set fileencodings=utf-8,latin1
 
+"Save on F2
+
+nmap <F2> :update<CR>
+vmap <F2> <Esc><F2>gv
+imap <F2> <c-o><F2>
+
 "Autosave 
 :au FocusLost * silent! wa
 :set autowriteall
@@ -34,6 +40,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+"Build and run C program with <F8>
+map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+
+"Build and run haskell program with <F5>
+map <F5> :w <CR> :!ghc % -o %< && ./%< <CR>
 
 " shvim.vim
 autocmd FileType haskell nmap <C-c><C-l> :GhciRange<CR>
@@ -66,9 +78,9 @@ autocmd FileType haskell nmap <C-c><C-r> :GhciReload<CR>
 " $ make
 
 set nocompatible
-set nowrap
+set wrap
 set showmode
-set tw=80
+set tw=0
 set smartcase
 set smarttab
 set smartindent

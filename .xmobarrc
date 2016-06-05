@@ -101,8 +101,8 @@ Config {
 
     -- keyboard layout indicator
     , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")
-    , ("us"         , "<fc=#8B0000>US</fc>")
-    , ("se"         , "<fc=#008B8B>SE</fc>")
+    , ("us(altgr-intl)"  , "<fc=#8B0000>US</fc>")
+    , ("se"              , "<fc=#008B8B>SE</fc>")
     ]
     ]
 }
